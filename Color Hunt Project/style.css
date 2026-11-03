@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 7px 14px 12px;
+
+    min-height: 100vh;
+
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+.top-strip {
+    width: 100%;
+    height: 27px;
+
+    background-color: #d9d9d9;
+}
+
+
+.website {
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+    min-height: 818px;
+
+    margin: 0 auto;
+
+    background-color: #151927;
+    overflow: hidden;
+}
+
+
+.color-palette {
+    position: absolute;
+
+    top: 91px;
+    left: 14%;
+
+    display: flex;
+
+    width: 34%;
+    height: 250px;
+
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.color {
+    height: 100%;
+}
+
+.blue {
+    width: 38%;
+    background-color: #303eaa;
+}
+
+.steel-blue {
+    width: 24%;
+    background-color: #2f709e;
+}
+
+.teal {
+    width: 17%;
+    background-color: #48a3b7;
+}
+
+.turquoise {
+    width: 21%;
+    background-color: #12d1b0;
+}
+
+.title {
+    position: absolute;
+
+    top: 61px;
+    right: 2.5%;
+
+    width: 31%;
+
+    text-align: right;
+}
+
+.title h1 {
+    margin: 0;
+
+    font-size: clamp(26px, 3.8vw, 34px);
+    font-weight: normal;
+}
+
+.title p {
+    margin-top: 15px;
+
+    font-size: 10px;
+}
+
+
+.introduction {
+    position: absolute;
+
+    top: 172px;
+    right: 1.5%;
+
+    width: 33%;
+}
+
+.introduction p {
+    margin: 0;
+
+    font-size: clamp(17px, 2.8vw, 24px);
+    line-height: 1.2;
+}
+
+
+.instructions {
+    position: absolute;
+
+    top: 394px;
+    left: 14.3%;
+
+    width: 29%;
+}
+
+.instructions p {
+    margin: 0;
+
+    font-size: clamp(17px, 2.8vw, 24px);
+    line-height: 1.28;
+}
+
+
+.picture-section {
+    position: absolute;
+
+    top: 365px;
+    right: 4.9%;
+
+    width: 29.5%;
+    height: 421px;
+
+    padding: 7px;
+
+    background-color: #079cff;
+    border-radius: 5px;
+}
+
+.picture-section img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 7px;
+    }
+
+    .website {
+        min-height: auto;
+        padding: 30px 22px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .color-palette,
+    .title,
+    .introduction,
+    .instructions,
+    .picture-section {
+        position: static;
+        width: 100%;
+    }
+
+    .title {
+        order: 0;
+    }
+
+    .title h1 {
+        font-size: 32px;
+    }
+
+    .color-palette {
+        order: 1;
+        height: 180px;
+    }
+
+    .introduction {
+        order: 2;
+    }
+
+    .instructions {
+        order: 3;
+    }
+
+    .introduction p,
+    .instructions p {
+        font-size: 20px;
+    }
+
+    .picture-section {
+        order: 4;
+        height: auto;
+        aspect-ratio: 0.58;
+    }
+
+    .picture-section img {
+        object-fit: cover;
+    }
+}
